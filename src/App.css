@@ -1,38 +1,133 @@
-.App {
+
+*{
+  box-sizing: border-box;
+  margin:0px;
+}
+.wordle-container {
   text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-position: center;
+  height:100vh;
+  background-size: cover;
+
+}
+.container{
+  display:flex; 
+  justify-content:space-between;
+  
+}
+.sun{
+  font-size:35px;
+  transform: translateY(10px);
+  cursor:pointer;
+
+
+}
+.moon{
+  transform: translateY(9px);
+  font-size:28px;
+  cursor:pointer;
+
+
+}
+.submit{
+  font-size:medium;
+  background-image: linear-gradient(to left, green, yellow);
+  height:25px;
+  border-radius:2px;
+  transform: translateY(1.8px);
+  cursor:pointer;
+}
+.input{
+  height:25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.note{
+  font-size:35px;
+  cursor:pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.restart{
+  font-size:15px;
+  margin-right:15px;
+  background-image: linear-gradient(to left, green, yellow);
+  cursor:pointer;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.flow{
+  overflow:scroll;
+  height:300px;
+  width:300px;
+  background-color:white;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    transform: translateX(200px);
+    font-size:16px;
+    font-weight: bold;
+    padding:15px
+}
+
+
+.span{
+  color:green
+}
+.span2{
+  color:yellow
+}
+
+.dark {
+  background-color: #121212;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.light {
+  background-color: white;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.row {
+  display: flex;
+  gap: 5px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  text-transform: uppercase;
+}
+
+.green {
+  background-color: green;
+  color: white;
+}
+
+.yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.gray {
+  background-color: gray;
+  color: white;
+}
+
+.toggle-dark {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
 }
